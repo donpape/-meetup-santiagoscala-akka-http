@@ -1,0 +1,18 @@
+<html>
+<head>
+    <script>
+    ws = new WebSocket("ws://localhost:8080/websocket");
+    ws.onmessage = function (event) {
+        console.log(event.data);
+    }
+
+    function send() {
+        ws.send('10');
+    };
+
+    </script>
+</head>
+<body>
+<button onclick="javascript:send();">send</button>
+</body>
+</html>
